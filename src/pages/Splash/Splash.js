@@ -1,20 +1,16 @@
 import "./Splash.css";
 import Typewriter from "typewriter-effect";
+import { Button } from "@mui/material";
 
 export default function Splash() {
   return (
+    <div className="splash-container">
     <div className="masthead segment">
       <div className="ui page grid">
         <div className="column">
           <div className="introduction">
             <h1 className="ui inverted header">
-              {/* <span className="text"> */}
-              {/* Perspective background from old{" "}
-                <a href="https://www.semantic-ui.com/" target="_new">
-                  Semantic UI
-                </a>{" "}
-                website
-              </span> */}
+
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter
@@ -28,13 +24,16 @@ export default function Splash() {
                     .typeString("To Enter")
                     .start();
                 }}
-              />{" "}
-              <a href="/about">Click Here</a>
+              />
             </h1>
             <div className="ui hidden divider"></div>
+            <Button variant="contained" href="/about">
+              Click Here
+            </Button>
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
