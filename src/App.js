@@ -1,15 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import About from "./pages/About/About";
-import Splash from "./pages/Splash/Splash";
 
+import {
+  BrowserRouter as Router, 
+} from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
+import NavBar from './components/NavBar'
 
 function App() {
+  console.log(window.location.pathname)
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Splash/>} />
-        <Route path="/about" element={<About/>} />
-      </Routes>
+      {window.location.pathname !== '/' ? ( <NavBar />) : ('')}      
+      <AnimatedRoutes />
     </Router>
   );
 }
