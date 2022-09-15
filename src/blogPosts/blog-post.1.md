@@ -1,6 +1,6 @@
-# Sample blog post
+# Tutoring while still always learning
 
-_April 1, 2020 by [Vinnie](/)_
+_Sepetember 13, 2022 _
 
 This blog post shows a few different types of content that are supported and styled with
 Material styles. Basic typography, images, and code are all supported.

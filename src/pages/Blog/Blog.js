@@ -78,14 +78,17 @@ const theme = createTheme();
 export default function Blog() {
   return (
     <motion.div
-    initial={{ width: 0 }}
-    animate={{ width: "100%"}}
-    exit={{ x: window.innerWidth, transition: { duration: 1 } }}
+    // initial={{ width: 0 }}
+    // animate={{ width: "100%"}}
+    // exit={{ x: window.innerWidth, transition: { duration: 1 } }}
+    initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
       >
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Container maxWidth="lg" sx={{pt:1}}>
-        {/* <Header title="Blog" sections={sections} /> */}
+        
         <main >
           <MainFeaturedPost post={mainFeaturedPost}  />
           <Grid container spacing={4}>
@@ -94,7 +97,7 @@ export default function Blog() {
             ))}
           </Grid>
           <Grid container spacing={5} sx={{ mt: 3 }}>
-            <Main title="From the firehose" posts={posts} />
+            <Main title="From the mind of Vinnie" posts={posts} />
             <Sidebar
               title={sidebar.title}
               description={sidebar.description}
